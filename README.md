@@ -14,7 +14,7 @@ python productpage.py 9080
 docker build -t webpage .
 
 # Run Python
-docker run -d --name webpage -p 8083:8083 webpage
+docker run -d --name productpage -p 8083:8083 --link details:details --link ratings:ratings --link reviews:reviews -e 'REVIEWS_HOSTNAME=http://reviews:9080' -e 'RATINGS_HOSTNAME=http://ratings:8080' -e 'DETAILS_HOSTNAME=http://details:8081' productpage
 
 * Test with Port 8083
 ```
