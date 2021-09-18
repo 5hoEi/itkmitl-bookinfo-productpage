@@ -9,3 +9,11 @@ pip install -r requirements.txt
 python productpage.py 9080
 ```
 # itkmitl-bookinfo-productpage
+
+# Build Docker Image for productpage service
+docker build -t webpage .
+
+# Run Python
+docker run -d --name webpage -p 8082:9080 webpage
+
+* Test with Port 8083
