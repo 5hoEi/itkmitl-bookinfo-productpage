@@ -18,3 +18,9 @@ docker run -d --name productpage -p 8083:8083 --link details:details --link rati
 
 * Test with Port 8083
 ```
+
+## How to run with Docker Compose
+
+```bash
+docker-compose up
+```
